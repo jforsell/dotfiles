@@ -5,5 +5,5 @@ brew install vim
 
 # Symlink .vimrc
 SCRIPTPATH=$(cd "$(dirname "$0")"; pwd)
-ln -s $SCRIPTPATH/../dotfiles/dot.vimrc ~/.vimrc
+ln -sf $SCRIPTPATH/../dotfiles/dot.vimrc ~/.vimrc
 
