@@ -20,4 +20,4 @@ brew cask install font-hack-nerd-font
 # Enable Nerd-Fonts
 grep -qxF "POWERLEVEL9K_MODE='nerdfont-complete'" ~/.zshrc || echo "POWERLEVEL9K_MODE='nerdfont-complete'" >> ~/.zshrc
 
-echo "Note: The font to use in iTerm2 is 'Hack Regular Nerd Font Complete'."
+echo "Note: Change font and color preset to 'Hack Regular Nerd Font Complete' and Pastel (Dark Background) respectively."
