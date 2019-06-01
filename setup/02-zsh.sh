@@ -10,3 +10,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 SCRIPTPATH=$(cd "$(dirname "$0")"; pwd)
 ln -s $SCRIPTPATH/../dotfiles/dot.zshenv ~/.zshenv
 ln -s $SCRIPTPATH/../dotfiles/dot.zlogin ~/.zlogin
+ln -s $SCRIPTPATH/../dotfiles/dot.zprofile ~/.zprofile
