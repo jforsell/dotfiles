@@ -17,7 +17,4 @@ sed -i '' "s/^ZSH_THEME=.*$/ZSH_THEME=powerlevel10k\/powerlevel10k/" ~/.zshrc
 brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
 
-# Enable Nerd-Fonts
-grep -qxF "POWERLEVEL9K_MODE='nerdfont-complete'" ~/.zshrc || echo "POWERLEVEL9K_MODE='nerdfont-complete'" >> ~/.zshrc
-
 echo "Note: Change font and color preset to 'Hack Regular Nerd Font Complete' and Pastel (Dark Background) respectively."
