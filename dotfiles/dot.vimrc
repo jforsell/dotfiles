@@ -3,3 +3,9 @@ set clipboard=unnamed
 
 " Enable trackpad
 set mouse=a
+
+" Line numbers
+set number
+
+" Syntax highligting
+syntax on
