@@ -8,9 +8,11 @@ if [ ! -d "~/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
-# Zsh autosuggestions
+# Install zsh autosuggestions plugin
 git -C ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions pull || git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-sed -i '' "s/^plugins=(git)$/plugins=(git zsh-autosuggestions)/" ~/.zshrc
+
+# Add ssh-agent and zsh-autosuggestions plugins to .zshrc
+sed -i '' "s/^plugins=(git)$/plugins=(git ssh-agent zsh-autosuggestions)/" ~/.zshrc
 
 # Symlink zsh dotfiles
 SCRIPTPATH=$(cd "$(dirname "$0")"; pwd)
