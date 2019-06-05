@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Install Powerlevel9k
 brew tap sambadevi/powerlevel9k

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Take ownership of /usr/local to fix brew permission issues -- see https://stackoverflow.com/a/14539521"
 sudo chown -R $(whoami) $(brew --prefix)/*

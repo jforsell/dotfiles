@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Change user's default shell to zsh
 chsh -s /bin/zsh

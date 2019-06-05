@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ ! -d "~/miniconda" ]; then
   # Get Miniconda script
