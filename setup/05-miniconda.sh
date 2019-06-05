@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if [ ! -d "~/miniconda" ]; then
+if [ -d ~/miniconda/ ]; then
+  echo "Miniconda already installed"
+else
   # Get Miniconda script
   wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O ~/miniconda.sh
 
@@ -12,7 +14,15 @@ if [ ! -d "~/miniconda" ]; then
 fi
 
 # Create Python 2 environment
-conda create -n python2 python=2.7
+if conda env list | grep -q "python2" > /dev/null; then
+  echo "Conda python2 environment already exists"
+else
+  conda create -n python2 python=2.7
+fi
 
 # Create Python 3 environment
-conda create -n python3 python=3.7
+if conda env list | grep -q "python3" > /dev/null; then
+  echo "Conda python3 environment already exists"
+else
+  conda create -n python3 python=3.7
+fi

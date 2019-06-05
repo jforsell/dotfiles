@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # Install Vim
-brew install vim
+if brew ls --versions rbenv > /dev/null; then
+  echo "Vim already installed"
+else
+  brew install vim
+fi
 
 # Symlink .vimrc
 SCRIPTPATH=$(cd "$(dirname "$0")"; pwd)

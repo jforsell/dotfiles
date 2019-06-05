@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Change user's default shell to zsh
+# Change user's default shell to zsh (unnecessary in MacOS Catalina?)
 chsh -s /bin/zsh
 
 if [ ! -d "~/.oh-my-zsh" ]; then

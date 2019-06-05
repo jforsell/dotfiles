@@ -4,7 +4,15 @@ echo "Take ownership of /usr/local to fix brew permission issues -- see https://
 sudo chown -R $(whoami) $(brew --prefix)/*
 
 # Install wget
-brew install wget
+if brew ls --versions wget > /dev/null; then
+  echo "wget already installed"
+else
+  brew install wget
+fi
 
 # Install md5sum
-brew install md5sha1sum
+if brew ls --versions md5sha1sum > /dev/null; then
+  echo "md5sha1sum already installed"
+else
+  brew install md5sha1sum
+fi
