@@ -20,9 +20,16 @@ else
   conda create -n python2 python=2.7
 fi
 
-# Create Python 3 environment
-if conda env list | grep -q "python3" > /dev/null; then
-  echo "Conda python3 environment already exists"
+# Create Python 3.6 environment
+if conda env list | grep -q "python36" > /dev/null; then
+  echo "Conda python36 environment already exists"
 else
-  conda create -n python3 python=3.7
+  conda create -n python36 python=3.6
+fi
+
+# Create Python 3.7 environment
+if conda env list | grep -q "python37" > /dev/null; then
+  echo "Conda python37 environment already exists"
+else
+  conda create -n python37 python=3.7
 fi
