@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# Update brew
+brew update
+
 # Install pyenv
 if brew ls --versions pyenv > /dev/null; then
-  echo "pyenv already installed"
+  echo "pyenv already installed, upgrading..."
+  brew upgrade pyenv
 else
   brew install pyenv
 fi
@@ -32,6 +36,9 @@ else
   pyenv install $PYTHON_3_7
 fi
 
-
 echo "Setting global Python version to 2.7"
 pyenv global $PYTHON_2_7
+
+mkdir -p ~/projects
+SCRIPTPATH=$(cd "$(dirname "$0")"; pwd)
+ln -sf $SCRIPTPATH/../dotfiles/projects-dot.python-version ~/projects/.python-version
