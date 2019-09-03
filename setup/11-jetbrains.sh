@@ -7,3 +7,4 @@ defaults delete -g ApplePressAndHoldEnabled
 defaults write com.jetbrains.intellij.ce ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.pycharm ApplePressAndHoldEnabled -bool false
+defaults write com.jetbrains.CLion ApplePressAndHoldEnabled -bool false
