@@ -14,8 +14,8 @@ if ! grep -q zsh-syntax-highlighting ~/.zshrc; then
   echo "source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc
 fi
 
-# Add ssh-agent and zsh-autosuggestions plugins to .zshrc
-sed -i '' "s/^plugins=(git)$/plugins=(git ssh-agent zsh-autosuggestions)/" ~/.zshrc
+# Add zsh-autosuggestions plugin to .zshrc
+sed -i '' "s/^plugins=(git)$/plugins=(git zsh-autosuggestions)/" ~/.zshrc
 
 
 # Symlink zsh dotfiles
