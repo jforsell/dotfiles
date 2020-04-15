@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install Vim
-if brew ls --versions rbenv > /dev/null; then
+if brew ls --versions vim > /dev/null; then
   echo "Vim already installed"
 else
   brew install vim
