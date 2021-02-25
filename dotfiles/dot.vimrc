@@ -9,3 +9,18 @@ set number
 
 " Syntax highligting
 syntax on
+
+function! SweType()
+  set keymap=swe-gb
+  set spelllang=sv
+endfunction
+
+nnoremap <Leader>s :<C-U>call SweType()<CR>
+
+"{{{2 Switch to English
+function! EngType()
+  set keymap=
+  set spelllang=en_gb
+endfunction
+
+nnoremap <Leader>e :<C-U>call EngType()<CR>
