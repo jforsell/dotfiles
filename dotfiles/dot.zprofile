@@ -13,6 +13,6 @@ function nfa-dl-latest {
   if [ -z "$1" ] || [ -z "$2" ]; then
     echo "Usage: nfa-dl-latest Train Device"
   else
-    ~/projects/nsd/nsd --latest-build "$1" --filename "%.dmg" --softwarename  "%$2%InternalRestore (%"
+    nsd --latest-build "$1" --filename "%.dmg" --softwarename  "%$2%InternalRestore (%"
   fi
 }
